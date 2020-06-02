@@ -2,7 +2,7 @@
 
 Leverage the power of VScode docker container  to use, pre configured setup of django, node, alpine with gulp taskrunner.
 
-### What is this repository for ###
+## What is this repository for ##
 
 * Django is great for backend and if we combine it with alpine.js , it results in nice frontend experiance as well.
 
@@ -14,18 +14,17 @@ Leverage the power of VScode docker container  to use, pre configured setup of d
 
 * Version : 1.0.1
 
-### How do I get set up ###
+## How do I get set up ##
 
-#### Requirements
+### Requirements
 
 * [Docker] (<https://www.docker.com/get-started)>
 * [Vscode] (<https://code.visualstudio.com)>
 
 #### Git clone
 
-```
+```docker
  git clone https://github.com/Ravishrks/dockerise-vscode-django.git
-
 ```
 
 ### Setup on Vscode
@@ -38,28 +37,28 @@ Leverage the power of VScode docker container  to use, pre configured setup of d
 
 ### Building image
 
-docker```
+```docker
 docker build --tag $imageTag $directory
 docker build --tag webapp:1.0 .
 ```
 
 ### Run interactive shell inside container
 
-docker```
+```docker
 docker container run -it $imageTag /bin/bash
 docker container run -it webapp:1.0 /bin/bash
 ```
 
 ### Sart a container based on your new image
 
-docker```
+```docker
 docker run --publish $hostPort : $containerPort --detach --name $containerName $imageTag
 docker run --publish 8000:8000 --detach --name myapp webapp:1.0
 ```
 
 ### Delete running container
 
-docker```
+```docker
 docker rm --force $containerName
 docker rm --force myapp
 ```
@@ -68,7 +67,7 @@ docker rm --force myapp
 
 To start and stop compose
 
-docker```
+```docker
 docker-compose up
 docker-compose down
 ```
