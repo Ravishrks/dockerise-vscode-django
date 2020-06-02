@@ -36,8 +36,40 @@ RUN DEBIAN_FRONTEND=noninteractive npm install --global gulp-cli postcss-cli
 You have to configure vm to use docker-compose as it is not installed by default. 
 For detailed instruction related to configuration , click [here](https://cloud.google.com/community/tutorials/docker-compose-on-container-optimized-os)
 
+### You can follow below steps to set up docker-compose
 
+#### Install docker-compose 
 
+```docker
+docker run docker/compose:1.24.0 version
+```
+#### Making an alias to Docker Compose
 
+The docker run ... docker/compose:1.24.0 up command is equivalent to running the docker-compose up command on systems where Docker Compose is installed by the usual method.
+So that you don't have to remember or type this long command, create an alias for it.
 
+```docker
+echo alias docker-compose="'"'docker run --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v "$PWD:$PWD" \
+    -w="$PWD" \
+    docker/compose:1.24.0'"'" >> ~/.bashrc
+```
+
+#### Reload the Bash configuration.
+```docker
+source ~/.bashrc
+```
+## Congrats... you have done it
+
+### To run docker compose
+
+```docker
+docker-compose up
+```
+### To stop docker compose
+
+```docker
+docker-compose down
+```
 
