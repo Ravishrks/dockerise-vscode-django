@@ -28,6 +28,16 @@ RUN DEBIAN_FRONTEND=noninteractive npm install --global gulp-cli postcss-cli
 
 ### Accessing vm
 
-SSH into vm
+* SSH into vm and git clone your repo
+* Go to your project directory
+
+### Docker-compose setup
+
+You have to configure vm to use docker-compose as it is not installed by default. 
+For detailed instruction related to configuration , click [here](https://cloud.google.com/community/tutorials/docker-compose-on-container-optimized-os)
+
+
+
+
 
 
