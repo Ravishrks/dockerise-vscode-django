@@ -1,0 +1,7 @@
+*.md
+*.gitignore
+gulpfile.js
+package-lock.json
+package.json
+postcss.config.js
+tailwind.config.js
