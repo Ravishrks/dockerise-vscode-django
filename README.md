@@ -13,7 +13,6 @@ Leverage the power of VScode docker container  to use, pre configured setup of d
 * We aim to give support for production ready guidelines for application like serverless application i.e Using Google's cloud run
 
 * Version : 1.0.1
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up ###
 
