@@ -1,0 +1,26 @@
+{
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^4.0.2",
+        "browser-sync": "^2.26.7",
+        "@fullhuman/postcss-purgecss": "^2.2.0",
+        "autoprefixer": "^9.8.0",
+        "gulp-terser": "^1.2.0",
+        "tailwindcss": "^1.4.6",
+        "alpinejs": "^2.3.5"
+    },
+    "scripts": {
+        "tailwing:dev": "postcss ./src/css/tailwind.css -o ./main/static/main/css/tailwind.css",
+        "tailwind:prod": "postcss ./src/css/tailwind.css -o ./main/static/main/css/tailwind.css && gulp prod",
+        "cnt:build": "docker build --tag webapp:1.0 . && docker run --publish 8000:8000 --detach --name myapp webapp:1.0",
+        "cnt:shell": "docker container run -it webapp:1.0 /bin/bash",
+        "cnt:rm": "docker rm --force myapp",
+        "dj:sync": "python3 app/manage.py makemigrations && python3 app/manage.py migrate",
+        "dj:sync:prod": "python3 app/p_manage.py makemigrations && python3 app/p_manage.py migrate",
+        "dj": "python3 app/manage.py runserver 0.0.0.0:8000",
+        "pip:fr": "pip freeze > requirements.txt",
+        "dj:serve": "cd app; gunicorn --bind 0.0.0.0:8000 app.wsgi"
+    }
+}
