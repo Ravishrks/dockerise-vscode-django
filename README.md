@@ -2,7 +2,6 @@
 
 Leverage the power of VScode docker container  to use, pre configured setup of django, node, alpine with gulp taskrunner.
 
-
 ### What is this repository for ###
 
 * Django is great for backend and if we combine it with alpine.js , it results in nice frontend experiance as well.
@@ -20,8 +19,8 @@ Leverage the power of VScode docker container  to use, pre configured setup of d
 
 #### Requirements
 
-* [Docker] (https://www.docker.com/get-started)
-* [Vscode] (https://code.visualstudio.com)
+ [Docker] (https://www.docker.com/get-started)
+ [Vscode] (https://code.visualstudio.com)
 
 #### Git clone
 
