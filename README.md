@@ -30,7 +30,7 @@ Leverage the power of VScode docker container  to use, pre configured setup of d
 ### Setup on Vscode
 
 * Press F1, after opening project directory in VScode (same directory where docker-compose.yml stored).
-* It will take some time to build image, and after sometime it will be ready to use
+* It will take some time to build images for the first time, VScode will notify you once build is complited.
 * We are using docker compose enviroment with Vs code, To know how to use it clck [here](https://code.visualstudio.com/docs/remote/containers#_using-docker-compose)
 
 ## Docket cheatsheet
