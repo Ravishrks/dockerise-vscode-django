@@ -17,4 +17,4 @@ RUN mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/
 RUN pip3 install -r requirements.txt
-COPY ./app /code/
+COPY app /code/
