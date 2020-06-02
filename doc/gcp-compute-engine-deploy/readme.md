@@ -16,3 +16,18 @@ RUN DEBIAN_FRONTEND=noninteractive npm install --global gulp-cli postcss-cli
 
 #################### Node Depenency for dev ###########################
 ```
+
+### GCP setup
+
+#### Create vm instance with docker optimised image on compute engine
+
+* If you are creating using GUI, make sure to tick the below option
+** "Deploy a container image to this VM instance"
+
+* Allow HTTP and HTTPS access in firewall
+
+### Accessing vm
+
+SSH into vm
+
+
