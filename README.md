@@ -16,46 +16,52 @@ Leverage the power of VS vode dockerise container. Explore the ready to use, pre
 * Version : 1.0.1
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+### How do I get set up ###
 
-* Simply git clone
+#### Requirements
+
+* [Docker] (https://www.docker.com/get-started)
+* [Vscode] (https://code.visualstudio.com)
+
+#### Git clone
 
 ```
- example: git clone https://example.com
+ git clone https://github.com/Ravishrks/dockerise-vscode-django.git
+
 ```
 
-* You are recommanded to have VS code installed. Check out Vs Code [here](https://code.visualstudio.com/)
+### Setup on Vscode
 
+* Press F1, after opening project directory in VScode (same directory where docker-compose.yml stored).
+* It will take some time to build image, and after sometime it will be ready to use
 * We are using docker compose enviroment with Vs code, To know how to use it clck [here](https://code.visualstudio.com/docs/remote/containers#_using-docker-compose)
-
 
 ## Docket cheatsheet
 
-### Building image   
+### Building image
 
-```
+docker```
 docker build --tag $imageTag $directory
 docker build --tag webapp:1.0 .
 ```
 
 ### Run interactive shell inside container
 
-```
+docker```
 docker container run -it $imageTag /bin/bash
 docker container run -it webapp:1.0 /bin/bash
 ```
 
 ### Sart a container based on your new image
 
-```
+docker```
 docker run --publish $hostPort : $containerPort --detach --name $containerName $imageTag
 docker run --publish 8000:8000 --detach --name myapp webapp:1.0
-
 ```
 
 ### Delete running container
 
-```
+docker```
 docker rm --force $containerName
 docker rm --force myapp
 ```
@@ -64,8 +70,7 @@ docker rm --force myapp
 
 To start and stop compose
 
-```
+docker```
 docker-compose up
 docker-compose down
 ```
-
