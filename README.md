@@ -18,8 +18,8 @@ Leverage the power of VScode docker container  to use, pre configured setup of d
 
 ### Requirements
 
-* [Docker](<https://www.docker.com/get-started)>
-* [Vscode](<https://code.visualstudio.com)>
+* [Docker](https://www.docker.com/get-started)
+* [Vscode](https://code.visualstudio.com)
 
 #### Git clone
 
