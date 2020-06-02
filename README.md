@@ -1,7 +1,7 @@
 # dockerise-vscode-django
-Explore the ready to use, pre configured setup of django, node, alpine with gulp taskrunner. 
 
-Leverage the power of VS vode dockerise container. Explore the ready to use, pre configured setup of django, node, alpine with gulp taskrunner. 
+Leverage the power of VS vode dockerise container  to use, pre configured setup of django, node, alpine with gulp taskrunner.
+
 
 ### What is this repository for ###
 
