@@ -33,4 +33,4 @@ services:
       # You will finally get the certificate
       # Next step is to configure your nginx conf file
       # Run below command on command line on cloud, using 'docker-compose exec'
-    command: certbot certonly --dns-google --dns-google-credentials ~/.secrets/certbot/google.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
+    command: certbot certonly --dns-google --dns-google-credentials google.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
