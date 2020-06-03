@@ -1,12 +1,6 @@
-# Helps to install SSl certificate easily, this doc demonstrate the Google cloud compute engine
-# Make sure to grnerate your google-dns-credentials and store in ~/.secrets/certbot/google.json
-# Make sure to edit your domain name
-# You can use wildcard to have certificate for dynamic/multiple subdomain
-# Next step is to configure your nginx conf file
-
-version: "3.4"
+version: '3.4'
   
-
+services:
   certbot:
     image: certbot/certbot
     volumes:
@@ -16,4 +10,9 @@ version: "3.4"
       - ./nginx/secret/dns_secret.json:/etc/dns_bot/dns_secret.json 
     command: certbot certonly --dns-google --dns-google-credentials /etc/dns_bot/dns_secret.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
 
-    
+
+# Helps to install SSl certificate easily, this doc demonstrate the Google cloud compute engine
+# Make sure to grnerate your google-dns-credentials and store in ~/.secrets/certbot/google.json
+# Make sure to edit your domain name
+# You can use wildcard to have certificate for dynamic/multiple subdomain
+# Next step is to configure your nginx conf file
