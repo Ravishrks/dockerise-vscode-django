@@ -71,3 +71,19 @@ To start and stop compose
 docker-compose up
 docker-compose down
 ```
+
+## Production mode
+
+* Use the production compose file, or merge with default compose file
+
+###
+
+To use in production.
+
+* This deploys all three services using the configuration in docker-compose.yml and docker-compose.prod.yml (but not the dev configuration in docker-compose.override.yml).
+
+* Order of file matter to override compose file
+
+```docker
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+```
