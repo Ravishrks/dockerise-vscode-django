@@ -1,36 +1,15 @@
 # Helps to install SSl certificate easily, this doc demonstrate the Google cloud compute engine
+# Make sure to grnerate your google-dns-credentials and store in ~/.secrets/certbot/google.json
+# Make sure to edit your domain name
+# You can use wildcard to have certificate for dynamic/multiple subdomain
+# Next step is to configure your nginx conf file
 
 version: "3.4"
-
-services:
-  nginx:
-    image: nginx:latest
-
-    # Your server (nginx container) and this volume will share the volume directory,
-    # Make sure to have same volume conf... or simply copy your main compose volume conf.
-
-    volumes:
-      # We use other nginx conf file for certbot
-      - ./nginx/mysite.conf:/etc/nginx/conf.d/mysite.conf
-      - ./nginx/www:/usr/share/nginx/html
-      # certbot-specefic
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    ports:
-      - "80:80"
-    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
-
   certbot:
     image: certbot/certbot
     volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    depends_on:
-      - nginx  
-      # Make sure to grnerate your google-dns-credentials and store in ~/.secrets/certbot/google.json
-      # Make sure to edit your domain name
-      # You can use wildcard to have certificate for dynamic/multiple subdomain
-      # You will finally get the certificate
-      # Next step is to configure your nginx conf file
-      # Run below command on command line on cloud, using 'docker-compose exec'
-    command: certbot certonly --dns-google --dns-google-credentials google.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
+      - ./nginx/certbot/letsencrypt:/etc/letsencrypt
+      - ./nginx/certbot/www:/var/www/certbot
+      - ./nginx/certbot/lib:/var/lib/letsencrypt
+      - ./nginx/secret/dns_secret.json:/etc/dns_bot/dns_secret.json 
+    command: certbot certonly --dns-google --dns-google-credentials /etc/dns_bot/dns_secret.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
