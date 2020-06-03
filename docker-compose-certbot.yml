@@ -15,3 +15,5 @@ version: "3.4"
       - ./nginx/certbot/lib:/var/lib/letsencrypt
       - ./nginx/secret/dns_secret.json:/etc/dns_bot/dns_secret.json 
     command: certbot certonly --dns-google --dns-google-credentials /etc/dns_bot/dns_secret.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
+
+    
