@@ -11,7 +11,7 @@ services:
 
     volumes:
       # We use other nginx conf file for certbot
-      - ./nginx/mysite-certbot.conf:/etc/nginx/conf.d/mysite.conf
+      - ./nginx/mysite.conf:/etc/nginx/conf.d/mysite.conf
       - ./nginx/www:/usr/share/nginx/html
       # certbot-specefic
       - ./certbot/conf:/etc/letsencrypt
@@ -30,4 +30,5 @@ services:
       # You can use wildcard to have certificate for dynamic/multiple subdomain
       # You will finally get the certificate
       # Next step is to configure your nginx conf file
-    command: certbot certonly --dns-google --dns-google-credentials ~/.secrets/certbot/google.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
+      # Run below command on command line on cloud, using 'docker-compose exec'
+    # command: certbot certonly --dns-google --dns-google-credentials ~/.secrets/certbot/google.json --dns-google-propagation-seconds 120 -d example.com -d www.example.com  
