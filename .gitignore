@@ -5,11 +5,13 @@
 __pycache__/
 *.py[cod]
 
+
 # custom 
 env
 
 # shell 
 *.out
+init-letsencrypt.sh
 
 
 # PyInstaller
