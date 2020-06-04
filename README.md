@@ -2,6 +2,10 @@
 
 Leverage the power of VScode docker container  to use, pre configured setup of django, node, alpine with gulp taskrunner.
 
+You can test even https connection without deploying to cloud. And you even use your generated locally ssl certificate in production. Which means zero configuration deployment. 
+
+It is truely zero latency between production and development enviroment.
+
 ## What is this repository for ##
 
 * Django is great for backend and if we combine it with alpine.js , it results in nice frontend experiance as well.
@@ -80,8 +84,7 @@ docker-compose down
 
 To use in production.
 
-* This deploys all three services using the configuration in docker-compose.yml and docker-compose.prod.yml (but not the dev configuration in docker-compose.override.yml).
-
+* This deploys all three services using the configuration in docker-compose.yml and docker-compose.prod.yml.
 * Order of file matter to override compose file
 
 ```docker
