@@ -2,7 +2,7 @@
 
 Leverage the power of VScode docker container  to use, pre configured setup of django, node, alpine, tailwind with gulp taskrunner.
 
-You can test even https connection without deploying to cloud. And you even use locally generated ssl certificate in production. Which means zero configuration deployment.
+You can test even https connection without deploying to cloud. And use locally generated ssl certificate in production. Which means zero configuration deployment.
 
 It is truely zero latency between production and development enviroment.
 
