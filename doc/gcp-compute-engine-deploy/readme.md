@@ -81,6 +81,8 @@ docker-compose down
 
 ## Activating ssl using certbot and Let's Encrypt
 
+* Make sure to copy the content of the Google's service account credentials to dns-api-secret-key.json
+
 * Go to directory doc/gcp-computr-engine-deploy and run below command.
   
 * Below command will generate ssl certificate from letsencrypt
