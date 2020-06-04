@@ -14,7 +14,7 @@ services:
       # We use other nginx conf file in production 
       - ./nginx/mysite-certbot.conf:/etc/nginx/conf.d/mysite.conf
       - ./nginx/www:/usr/share/nginx/html
-      # certbot-specefic, to give access to ceryificate
+      # certbot-specefic, to give access to certificate
       - ./nginx/certbot/letsencrypt:/etc/letsencrypt
       - ./nginx/certbot/www:/var/www/certbot
       - ./nginx/certbot/lib:/var/lib/letsencrypt
@@ -23,7 +23,7 @@ services:
         - "80:80"
     environment:
       - NGINX_PORT=80    
-    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
+    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite-certbot.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
   
 
    
