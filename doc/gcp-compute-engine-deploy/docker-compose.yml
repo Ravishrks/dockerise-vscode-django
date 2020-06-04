@@ -1,0 +1,16 @@
+version: '3.4'
+    
+services:
+  server:
+    image: nginx:latest
+    restart: always
+    volumes:
+      - ./nginx/mysite.conf:/etc/nginx/conf.d/mysite.conf
+      - ./nginx/www:/usr/share/nginx/html
+    ports:
+      - "80:80"    
+    environment:  
+      - NGINX_PORT=80   
+    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
+  
+    

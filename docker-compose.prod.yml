@@ -6,14 +6,16 @@ services:
         - POSTGRES_DB=postgres
         - POSTGRES_USER=postgres
         - POSTGRES_PASSWORD=postgres
+
   webapp:
     volumes:
       - .:/code
+
   server:
     volumes:
       # We use other nginx conf file in production 
-      - ./nginx/nginx-ssl.conf:/etc/nginx/conf.d/mysite.conf
-      - ./nginx/www:/usr/share/nginx/html
+      - ./nginx/conf/nginx-ssl.conf:/etc/nginx/conf.d/mysite.conf
+      - ./nginx/conf/www:/usr/share/nginx/html
       # certbot-specefic, to give access to certificate
       - ./nginx/certbot/letsencrypt:/etc/letsencrypt
       - ./nginx/certbot/var:/var
