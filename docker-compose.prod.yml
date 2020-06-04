@@ -19,11 +19,11 @@ services:
       # certbot-specefic, to give access to certificate
       - ./nginx/certbot/letsencrypt:/etc/letsencrypt
       - ./nginx/certbot/var:/var
+      - ./nginx/certbot/dhparam.pem:/etc/ssl/dhparam.pem
     ports:
         - "443:443"
         - "80:80"
-    environment:
-      - NGINX_PORT=80    
+    
   
 
    

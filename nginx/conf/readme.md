@@ -8,7 +8,5 @@
 
 * mysite-ssl.conf is considered
 
-## For ssl certificate generation
-
-* mysite-certbot.conf is considered
+* Make sure to edit this file to configure your domain ... simply replace domain.com to your domain
   

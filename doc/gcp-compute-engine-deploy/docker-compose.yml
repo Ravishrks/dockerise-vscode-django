@@ -9,7 +9,7 @@ services:
       - ./dns-api-secret-key.json:/etc/ssl-dns-plugin/secret.json
     ports:
       - "80:80" 
-      # Run below command in interactive mode using docker-compose exec certbot [cmd]      
-    # command: certonly --stageing --dns-google --dns-google-credentials /etc/ssl-dns-plugin/secret.json --dns-google-propagation-seconds 120  -d example.com 
-  
-    
+      # Using dry-run for staging... for testing purpose... if everything works fine, just remove --dry-run flag  
+      # replace yourmail@mail.com and domain.com with your mail and domain  
+    command: certonly --dry-run  --email yourmail@mail.com --agree-tos --staging --dns-google --dns-google-credentials /etc/ssl-dns-plugin/secret.json --dns-google-propagation-seconds 120  -d yourdomain.com 
+      

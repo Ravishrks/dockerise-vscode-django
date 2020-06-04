@@ -81,11 +81,21 @@ docker-compose down
 
 ## Activating ssl using certbot and Let's Encrypt
 
-## Running docker-compose service in interective mode
+* Go to directory doc/gcp-computr-engine-deploy and run below command.
+  
+* Below command will generate ssl certificate from letsencrypt
 
-* Building image
+* Make sure to edit the details in doc/gcp-computr-engine-deploy/docker-compose.yml. Such as email address and see the instructions there
 
+* After running below command your ssl will be configured and will be ready to use. Just stop this container with docker-compose down command.
+
+* Go to your project directory, and run docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+* Congratulation, you have done it... Enjoy easy development cycle.
+  
 ```docker
-docker-compose exec $service $command
-docker-compose exec webapp ls /etc
+docker-compose up
 ```
+
+* The good part is , you can test ssl on your local computer, without deploying to google cloud.
+* For this, you have to edit your host file and add an entry to 127.0.0.1 to your domain name, so it can point your local computer
