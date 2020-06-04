@@ -23,7 +23,7 @@ RUN DEBIAN_FRONTEND=noninteractive npm install --global gulp-cli postcss-cli
 
 * If you are creating using GUI, make sure to tick the below option
 
-** "Deploy a container image to this VM instance"
+* "Deploy a container image to this VM instance"
 
 * Allow HTTP and HTTPS access in firewall
 
