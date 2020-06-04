@@ -12,7 +12,7 @@ sudo docker run -it --rm --name certbot \
             -v "nginx/certbot/lib:/var/lib/letsencrypt" \
             -v "nginx/certbot/www:/var/www/certbot" \
             -v "nginx/secret/dns-secret.json:/etc/dns-bot/dns-secret.json" \
-            certbot/certbot certbot certonly \
+            certbot/dns-google certonly \
             --dns-google --dns-google-credentials /etc/dns-bot/dns-secret.json \
             --dns-google-propagation-seconds 120 \ 
             -d example.com -d www.example.com

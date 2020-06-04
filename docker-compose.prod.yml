@@ -12,12 +12,12 @@ services:
   server:
     volumes:
       # We use other nginx conf file in production 
-      - nginx/mysite-certbot.conf:/etc/nginx/conf.d/mysite.conf
-      - nginx/www:/usr/share/nginx/html
+      - ./nginx/mysite-certbot.conf:/etc/nginx/conf.d/mysite.conf
+      - ./nginx/www:/usr/share/nginx/html
       # certbot-specefic, to give access to ceryificate
-      - nginx/certbot/letsencrypt:/etc/letsencrypt
-      - nginx/certbot/www:/var/www/certbot
-      - nginx/certbot/lib:/var/lib/letsencrypt
+      - ./nginx/certbot/letsencrypt:/etc/letsencrypt
+      - ./nginx/certbot/www:/var/www/certbot
+      - ./nginx/certbot/lib:/var/lib/letsencrypt
     ports:
         - "443:443"
         - "80:80"
