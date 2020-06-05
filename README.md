@@ -31,6 +31,19 @@ It is truely zero latency between production and development enviroment.
  git clone https://github.com/Ravishrks/dockerise-vscode-django.git
 ```
 
+#### NPM setup
+
+* Init the npm with npm init command
+
+```sh
+npm init -y
+```
+
+* Configure npm script and dependencies
+  
+Copy scripts and depedencied from dev_depedencies.json files to your package.json and run npm install command to install all dependencies, and you have npm scrips available to handle common tasks, like manageing tailwind, gulp task runner and many more
+```
+
 ### Setup on Vscode
 
 * Press F1, after opening project directory in VScode (same directory where docker-compose.yml stored).
