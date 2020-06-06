@@ -154,5 +154,4 @@ function live() {
 // export tasks
 exports.default = series(cssDev, jsDev, live);
 exports.prod = series(cssDev, jsDev, syncTemplate, css, js);
-exports.sync = syncTemplate
-
+exports.sync = syncTemplate;
