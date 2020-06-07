@@ -37,3 +37,39 @@ Development enviroment is easy but we deployment causes real challanges and it i
 * We use docker to have contanerised enviroment
 
 * When it is combined with Vscode, it make wonders. Gives the possibilities for seamless development locally as well as remotely.
+
+
+## Folder structure
+
+```bash
+app : your django project
+   app
+        settings.py
+        wsgi.py
+        urls.py
+   manage.py
+data : used to mount data such as handling static file as well as postgres data
+    django/static
+    postgres
+dev : special enviroment for development purpose
+    Dockerfile
+doc : contains documentation
+   ...
+nginx
+    conf : contains your nginx configuration file
+src : uses to contain frontend specefic file
+    js : put all your js file, it will be auto bundled to one js file and production ready
+    scss : put all your scss file, will be auto compiled and bundled to single css file
+    templates : just like django template, alternative place to create index.html or any template file, it will be auto copied to desired app folder
+        main: example of app folder
+            index.html : example of template file
+            base.html
+        article
+        users
+
+Dockerfile
+gulpfile.js : your gulp configuration and task, you can customise it and extend it
+postcss.config.js : used for tailwind spwcwfic post processing css file to have production ready css file
+tailwind.config.js : your tailwind specefilc config file.
+dev_depedencies.json : it has depemndencies, which you need to copy it's section to your package.json before running npm install. It also has various scripts to handle common tasks, like processing tailwing css, generating requirements.txt
+```
