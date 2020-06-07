@@ -12,6 +12,7 @@ env
 # shell 
 *.out
 init-letsencrypt.sh
+data/
 
 
 # PyInstaller
