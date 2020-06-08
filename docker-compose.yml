@@ -24,10 +24,12 @@ services:
   webapp:
     build: .
     volumes:
-      - .:/code
+      - ./app:/code/app
     depends_on:
       - db
-    working_dir: /code/app/  
+    working_dir: /code/app/
+    depends_on:
+      - db 
     command: gunicorn --bind 0.0.0.0:8000 app.wsgi 
 
   server:

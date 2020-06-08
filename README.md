@@ -148,3 +148,11 @@ docker-compose down
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
+
+## Helpful for django
+
+### To create super user in composer service (Webapp)
+
+```bash
+docker-compose exec -T webapp python3 manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'adminpass')"
+```

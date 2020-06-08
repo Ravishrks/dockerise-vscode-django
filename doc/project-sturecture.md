@@ -4,9 +4,9 @@ This section will help you to understand how project is structured and how it wi
 
 ## Why we need such tyupe of setup
 
-Django is great for backend as well as frontend but to make it more interactive we need some Javascript library and we should save ourselves from reinventing the wheel and invest same amount of time for best practices.
+Django is great for backend as well as frontend but to make it more interactive we need some Javascript library and we should save ourselves from reinventing the wheel. So we can focus on our core application development.
 
-Development enviroment is easy but we deployment causes real challanges and it is tough specially for new comer in Django.
+Deployment causes real challanges and it is tough specially for new comer in Django. So there should be a way to make it flawless.
 
 ## What we try to achieve
 
@@ -17,6 +17,8 @@ Development enviroment is easy but we deployment causes real challanges and it i
 * Use the power of tailwind css to support compomnent style design
 
 * Used Gulp as task runner to automate common tasks and have pre setup for Django development
+
+Use docker to practice industry standerd development cycle and production ready application fropm begenning.
 
 ## Some methologies
 
