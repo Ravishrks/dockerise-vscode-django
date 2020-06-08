@@ -38,6 +38,7 @@ services:
     volumes:
       - ./nginx/conf/mysite.conf:/etc/nginx/conf.d/mysite.conf
       - ./nginx/conf/www:/usr/share/nginx/html
+      - ./nginx/django/static:/usr/share/nginx/static
     ports:
       - "80:80"
     depends_on:

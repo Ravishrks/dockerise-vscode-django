@@ -75,3 +75,5 @@ postcss.config.js : used for tailwind spwcwfic post processing css file to have 
 tailwind.config.js : your tailwind specefilc config file.
 dev_depedencies.json : it has depemndencies, which you need to copy it's section to your package.json before running npm install. It also has various scripts to handle common tasks, like processing tailwing css, generating requirements.txt
 ```
+
+## Django webapp specefic folder structure
