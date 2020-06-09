@@ -14,15 +14,10 @@
         "tailwindcss": "^1.4.6"
       },
     "scripts": {
-        "tailwing:dev": "postcss ./src/css/tailwind.css -o ./main/static/main/css/tailwind.css",
-        "tailwind:prod": "postcss ./src/css/tailwind.css -o ./main/static/main/css/tailwind.css && gulp prod",
-        "cnt:build": "docker build --tag webapp:1.0 . && docker run --publish 8000:8000 --detach --name myapp webapp:1.0",
-        "cnt:shell": "docker container run -it webapp:1.0 /bin/bash",
-        "cnt:rm": "docker rm --force myapp",
+        "tailwing:dev": "postcss ./src/css/tailwind.css -o ./app/main/static/main/css/tailwind.css",
+        "tailwind:prod": "postcss ./src/css/tailwind.css -o ./app/main/static/main/css/tailwind.css && gulp prod",
         "dj:sync": "python3 app/manage.py makemigrations && python3 app/manage.py migrate",
-        "dj:sync:prod": "python3 app/p_manage.py makemigrations && python3 app/p_manage.py migrate",
         "dj": "python3 app/manage.py runserver 0.0.0.0:8000",
-        "pip:fr": "pip freeze > requirements.txt",
-        "dj:serve": "cd app; gunicorn --bind 0.0.0.0:8000 app.wsgi"
+        "pip:fr": "pip freeze > requirements.txt"
     }
 }
