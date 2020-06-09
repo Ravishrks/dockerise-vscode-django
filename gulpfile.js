@@ -44,19 +44,12 @@ function syncTemplate() {
         // getting app name
         var appName = Object.keys(appTemplates)[i]
 
-        // extracting template
-        var template = appTemplates[appName]['templates']
-
         var htmlSource = './src/templates/' + appName  + '/*.html';
         var htmlDest = myProject + '/' + appName + '/' +'templates/' + appName + '/';
 
+        // sending template in desired app location 
         sourceToDestination(htmlSource, htmlDest);
 
-        console.log(htmlDest)
-        console.log(htmlSource)
-
-
-        console.log(template)
     }
 
 
