@@ -10,12 +10,10 @@ services:
       - ./nginx/django/static:/usr/share/nginx/static
       # certbot-specefic, to give access to certificate
       - ./nginx/certbot/letsencrypt:/etc/letsencrypt
-      - ./nginx/certbot/var:/var
+      - ./nginx/var/cache/nginx:/var/cache/nginx
       - ./nginx/certbot/dhparam.pem:/etc/ssl/dhparam.pem
     ports:
         - "443:443"
         - "80:80"
-    
-  
 
-   
+        
