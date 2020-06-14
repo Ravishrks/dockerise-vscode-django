@@ -45,7 +45,7 @@ server {
 }
 
 server {
-    server_name dockdjango.club;
+    server_name domain.com www.domain.com;
 
     listen 443 ssl ;
     ssl_certificate /etc/letsencrypt/live/domain.com/fullchain.pem; # edit domain name
@@ -84,6 +84,7 @@ server {
         proxy_pass http://webapp:8000;
         client_max_body_size 0M;
     }
+
 
 }
 ```

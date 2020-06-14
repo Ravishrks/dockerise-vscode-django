@@ -25,13 +25,35 @@ It is truely zero latency between production and development enviroment.
 * [Docker](https://www.docker.com/get-started)
 * [Vscode](https://code.visualstudio.com)
 
-#### Git clone
+#### Clone the project
 
 ```bash
  git clone https://github.com/Ravishrks/dockerise-vscode-django.git
 ```
 
-#### NPM setup
+#### Setup VsCode dev enviroment
+
+* Plugin required
+  
+  -- [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+* Go to project directory
+
+```bash
+cd dockerise-vscode-django
+```
+
+* When you open your project folder in VsCode, you will see some 'double angular 45`b tilted' icon, click on that icon, that will give you option to open your project in container. You have to click on 'Reopen in container option'
+
+* You will be given multiple option to choose container configuration, click on 'From docker-compose.yml' you will also see text like, from existing docker-compose.yml file (under same option).
+
+* You will be asked to choose a service. You have to click on 'devenv'.
+
+* It will take some time in first build, after sometime you will have your linux development ready, pre configured for development enviroment.
+
+* Copy "scripts" and "devDependencies" from 'dev_depedencies.json' to your 'package.json.
+
+The devdevencies are needed for your node enviroment setup, you can also install all packages manually or copy scripts and run 'npm install'
 
 * Init the npm with npm init command
 
@@ -39,15 +61,27 @@ It is truely zero latency between production and development enviroment.
 npm init -y
 ```
 
-#### Setup package.json file
-
-You have to copy the dev-depedencied and scripts section of json object from dev_depedencies.json to your package.json file, then install the dependencies with below command.
-
-You have npm scrips available to handle common tasks, like manageing tailwind, gulp task runner and many more
+* Install npm depedencies
 
 ```bash
 npm install
 ```
+
+#### Nginx setup
+
+You will find markdown having instruction for setup in ./nginx directory
+
+#### Django setting recommandation
+
+You will find instruction on ./doc/django-settings-recommandation.md
+
+### Google cloud ssl setup and configuration
+
+See instruction in ./doc... file
+
+### To get insight about project structure and whey specefic type of file exist.
+
+See instruction in ./doc... file
 
 #### Database setup for django project
 

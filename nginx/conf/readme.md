@@ -10,7 +10,7 @@
 
 * Make sure to edit this file to configure your domain ... simply replace domain.com to your domain
 
-* You need to generate dhparam.pem as well
+* You need to generate dhparam.pem as well as it is used for security reasons
 
 To generate it, run below command
 
