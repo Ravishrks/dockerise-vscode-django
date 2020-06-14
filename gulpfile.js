@@ -36,7 +36,7 @@ let appTemplates = {
 
 // copy html template to respective template location
 
-function syncTemplate() {
+async function syncTemplate() {
     // getting app length
     let appLength = Object.keys(appTemplates).length
 
