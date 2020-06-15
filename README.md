@@ -102,6 +102,31 @@ DATABASES = {
 }
 ```
 
+* Static file setting in production mode (DEBUG = False)
+
+```python
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'/usr/share/nginx/static/')
+
+# Manageing media files
+
+MEDIA_URL ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/usr/share/nginx/media/')
+```
+
+* Static file setting in development mode (DEBUG = True)
+
+```python
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'.././nginx/django/static/')
+
+# Manageing media files
+
+MEDIA_URL ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '.././nginx/django/media/')
+```
+
+
 #### Django project setup
 
 Once you create django project, you have to configure project name in gulpfile.js. See example below.
