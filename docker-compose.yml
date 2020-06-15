@@ -37,6 +37,7 @@ services:
       - ./nginx/conf/mysite.conf:/etc/nginx/conf.d/mysite.conf
       - ./nginx/conf/www:/usr/share/nginx/html
       - ./nginx/django/static:/usr/share/nginx/static
+      - ./nginx/django/media:/usr/share/nginx/media
     ports:
       - "80:80"
     depends_on:
